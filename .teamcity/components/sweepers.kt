@@ -35,6 +35,8 @@ class sweeperDetails() {
                 cleanCheckout = true
             }
 
+            artifactRules = "%teamcity.build.checkoutDir%/debug*.log"
+
             steps {
                 SetGitCommitBuildId()
                 TagBuildToIndicatePurpose()

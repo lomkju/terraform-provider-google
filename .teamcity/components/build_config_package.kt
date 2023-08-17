@@ -33,6 +33,8 @@ class packageDetails(packageName: String, displayName: String, providerName: Str
                 cleanCheckout = true
             }
 
+            artifactRules = "%teamcity.build.checkoutDir%/debug*.log"
+
             steps {
                 SetGitCommitBuildId()
                 TagBuildToIndicatePurpose()
