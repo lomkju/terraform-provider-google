@@ -179,8 +179,8 @@ fun Triggers.RunNightly(config: NightlyTriggerConfiguration) {
         enforceCleanCheckout = true
 
         schedulingPolicy = cron {
-            hours = "16"
-            minutes = "48"
+            hours = "17"
+            minutes = "5"
             timezone = "SERVER"
 
             dayOfWeek = "*"
