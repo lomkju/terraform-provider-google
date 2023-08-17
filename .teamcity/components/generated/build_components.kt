@@ -178,11 +178,11 @@ fun Triggers.RunNightly(config: NightlyTriggerConfiguration) {
 
         schedulingPolicy = cron {
             hours = "16"
-            minutes = "38"
+            minutes = "48"
             timezone = "SERVER"
 
-            dayOfWeek = config.daysOfWeek
-            dayOfMonth = config.daysOfMonth
+            dayOfWeek = "*"
+            dayOfMonth = "*"
         }
     }
 }
