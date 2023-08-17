@@ -65,6 +65,8 @@ fun BuildSteps.TagBuildToIndicatePurpose() {
             #!/bin/bash
             TRIGGERED_BY=%teamcity.build.triggeredBy%
             TRIGGERED_BY_USERNAME=%teamcity.build.triggeredBy.username%
+            echo "value of TRIGGERED_BY is ${'$'}TRIGGERED_BY"
+            echo "value of TRIGGERED_BY_USERNAME is ${'$'}TRIGGERED_BY_USERNAME"
 
             if [[ "${'$'}TRIGGERED_BY_USERNAME" = "n/a" ]] && [[ ${'$'}TRIGGERED_BY == *"Schedule Trigger"* ]]; then
                 echo "Build was triggered as part of automated testing controlled by a Schedule Trigger"
