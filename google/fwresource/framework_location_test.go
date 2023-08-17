@@ -304,7 +304,7 @@ func TestLocationDescription_GetLocation(t *testing.T) {
 			ld: LocationDescription{
 				ProviderRegion: types.StringValue("provider-region"),
 			},
-			ExpectedError: true,
+			ExpectedError: false,
 		},
 		"returns an error when none of location/region/zone are set on the resource, and neither region or zone is set on the provider": {
 			ExpectedError: true,
